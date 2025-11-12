@@ -12,6 +12,8 @@ class _ListExampleState extends State<ListExample> {
   List<dynamic> tempfruitlist = [];
   @override
   Widget build(BuildContext context) {
+    // ignore: avoid_print
+    print('rebuild');
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
