@@ -7,6 +7,15 @@ class FavoriteController extends GetxController {
     'Apple',
     'Peach',
     'Ornage',
+    'Graps',
   ].obs;
   RxList tempfruitlist = [].obs;
+
+  addToFavourite(String value) {
+    tempfruitlist.add(value);
+  }
+
+  removeFromFavourite(String value) {
+    tempfruitlist.remove(value);
+  }
 }

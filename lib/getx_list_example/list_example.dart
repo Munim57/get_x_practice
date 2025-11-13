@@ -10,10 +10,8 @@ class ListExample extends StatefulWidget {
 }
 
 class _ListExampleState extends State<ListExample> {
-  // FavoriteController favoriteController = Get.put(FavoriteController());
+  FavoriteController favoriteController = Get.put(FavoriteController());
 
-  List<String> furitslist = ['Mango', 'Bnana', 'Apple', 'Peach', 'Ornage'];
-  List<dynamic> tempfruitlist = [];
   @override
   Widget build(BuildContext context) {
     // ignore: avoid_print
@@ -25,24 +23,34 @@ class _ListExampleState extends State<ListExample> {
           title: Center(child: Text('List Example')),
         ),
         body: ListView.builder(
-          itemCount: furitslist.length,
+          itemCount: favoriteController.furitslist.length,
           itemBuilder: (context, index) {
             return Card(
               child: ListTile(
                 onTap: () {
-                  if (tempfruitlist.contains(furitslist[index].toString())) {
-                    tempfruitlist.remove(furitslist[index].toString());
+                  if (favoriteController.tempfruitlist.contains(
+                    favoriteController.furitslist[index].toString(),
+                  )) {
+                    favoriteController.removeFromFavourite(
+                      favoriteController.furitslist[index].toString(),
+                    );
                   } else {
-                    tempfruitlist.add(furitslist[index].toString());
+                    favoriteController.addToFavourite(
+                      favoriteController.furitslist[index].toString(),
+                    );
                   }
-                  setState(() {});
                 },
-                title: Text(furitslist[index].toString()),
-                trailing: Icon(
-                  Icons.favorite,
-                  color: tempfruitlist.contains(furitslist[index].toString())
-                      ? Colors.red
-                      : Colors.white,
+                title: Text(favoriteController.furitslist[index].toString()),
+                trailing: Obx(
+                  () => Icon(
+                    Icons.favorite,
+                    color:
+                        favoriteController.tempfruitlist.contains(
+                          favoriteController.furitslist[index].toString(),
+                        )
+                        ? Colors.red
+                        : Colors.white,
+                  ),
                 ),
               ),
             );
