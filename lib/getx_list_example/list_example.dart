@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get_x_practice/getx_list_example/favorite_controller.dart';
 
 class ListExample extends StatefulWidget {
   const ListExample({super.key});
@@ -8,6 +10,8 @@ class ListExample extends StatefulWidget {
 }
 
 class _ListExampleState extends State<ListExample> {
+  // FavoriteController favoriteController = Get.put(FavoriteController());
+
   List<String> furitslist = ['Mango', 'Bnana', 'Apple', 'Peach', 'Ornage'];
   List<dynamic> tempfruitlist = [];
   @override

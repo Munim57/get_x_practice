@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 import 'package:get_x_practice/getx_list_example/list_example.dart';
+import 'package:get_x_practice/notification_switch_example/notifcation_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -18,7 +19,7 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: ListExample(),
+      home: NotifcationScreen(),
     );
   }
 }

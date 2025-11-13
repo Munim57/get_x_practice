@@ -17,6 +17,8 @@ class _NotifcationScreenState extends State<NotifcationScreen> {
 
   @override
   Widget build(BuildContext context) {
+    // ignore: avoid_print
+    print('Re-Build');
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
