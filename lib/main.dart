@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/get_navigation.dart';
-import 'package:get_x_practice/get_x_image_picker_example/imagepicker.dart';
+
+import 'package:get_x_practice/signin_case_example/signin.dart';
 
 void main() {
   runApp(MyApp());
@@ -16,9 +17,6 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Imagepicker(),
-    );
+    return GetMaterialApp(debugShowCheckedModeBanner: false, home: Signin());
   }
 }
