@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get_navigation/get_navigation.dart';
-
 import 'package:get_x_practice/signin_case_example/signin.dart';
 
 void main() {

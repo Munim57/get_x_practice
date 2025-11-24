@@ -19,7 +19,9 @@ class SignController extends GetxController {
       );
 
       var data = jsonDecode(response.body);
+      // ignore: avoid_print
       print(response.statusCode);
+      // ignore: avoid_print
       print(data);
       if (response.statusCode == 200) {
         Get.snackbar('Login Successful', 'Congrations');
